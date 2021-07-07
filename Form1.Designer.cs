@@ -47,9 +47,10 @@ namespace stickman_
             // 
             this.stickman.BackColor = System.Drawing.Color.Transparent;
             this.stickman.Image = ((System.Drawing.Image)(resources.GetObject("stickman.Image")));
-            this.stickman.Location = new System.Drawing.Point(44, 341);
+            this.stickman.Location = new System.Drawing.Point(21, 327);
+            this.stickman.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.stickman.Name = "stickman";
-            this.stickman.Size = new System.Drawing.Size(70, 70);
+            this.stickman.Size = new System.Drawing.Size(100, 100);
             this.stickman.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.stickman.TabIndex = 0;
             this.stickman.TabStop = false;
@@ -58,9 +59,10 @@ namespace stickman_
             // 
             this.target.BackColor = System.Drawing.Color.Transparent;
             this.target.Image = ((System.Drawing.Image)(resources.GetObject("target.Image")));
-            this.target.Location = new System.Drawing.Point(864, 361);
+            this.target.Location = new System.Drawing.Point(857, 352);
+            this.target.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.target.Name = "target";
-            this.target.Size = new System.Drawing.Size(50, 50);
+            this.target.Size = new System.Drawing.Size(75, 75);
             this.target.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.target.TabIndex = 1;
             this.target.TabStop = false;
@@ -71,9 +73,10 @@ namespace stickman_
             this.score.BackColor = System.Drawing.Color.Transparent;
             this.score.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.score.ForeColor = System.Drawing.Color.DarkRed;
-            this.score.Location = new System.Drawing.Point(13, 13);
+            this.score.Location = new System.Drawing.Point(10, 11);
+            this.score.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.score.Name = "score";
-            this.score.Size = new System.Drawing.Size(131, 39);
+            this.score.Size = new System.Drawing.Size(107, 31);
             this.score.TabIndex = 2;
             this.score.Text = "Score: ";
             // 
@@ -83,9 +86,10 @@ namespace stickman_
             this.life.BackColor = System.Drawing.Color.Transparent;
             this.life.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.life.ForeColor = System.Drawing.Color.DarkRed;
-            this.life.Location = new System.Drawing.Point(20, 56);
+            this.life.Location = new System.Drawing.Point(15, 46);
+            this.life.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.life.Name = "life";
-            this.life.Size = new System.Drawing.Size(96, 39);
+            this.life.Size = new System.Drawing.Size(79, 31);
             this.life.TabIndex = 3;
             this.life.Text = "Life: ";
             // 
@@ -94,9 +98,10 @@ namespace stickman_
             this.arrow.BackColor = System.Drawing.Color.Transparent;
             this.arrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.arrow.Image = ((System.Drawing.Image)(resources.GetObject("arrow.Image")));
-            this.arrow.Location = new System.Drawing.Point(121, 341);
+            this.arrow.Location = new System.Drawing.Point(125, 327);
+            this.arrow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.arrow.Name = "arrow";
-            this.arrow.Size = new System.Drawing.Size(70, 35);
+            this.arrow.Size = new System.Drawing.Size(75, 75);
             this.arrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.arrow.TabIndex = 4;
             this.arrow.TabStop = false;
@@ -108,8 +113,9 @@ namespace stickman_
             this.game_over.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.game_over.ForeColor = System.Drawing.Color.DarkRed;
             this.game_over.Location = new System.Drawing.Point(400, 200);
+            this.game_over.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.game_over.Name = "game_over";
-            this.game_over.Size = new System.Drawing.Size(200, 39);
+            this.game_over.Size = new System.Drawing.Size(162, 31);
             this.game_over.TabIndex = 5;
             this.game_over.Text = "Game Over";
             // 
@@ -119,9 +125,10 @@ namespace stickman_
             this.angle.BackColor = System.Drawing.Color.Transparent;
             this.angle.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.angle.ForeColor = System.Drawing.Color.DarkRed;
-            this.angle.Location = new System.Drawing.Point(41, 311);
+            this.angle.Location = new System.Drawing.Point(18, 303);
+            this.angle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.angle.Name = "angle";
-            this.angle.Size = new System.Drawing.Size(58, 17);
+            this.angle.Size = new System.Drawing.Size(46, 13);
             this.angle.TabIndex = 6;
             this.angle.Text = "angle: ";
             // 
@@ -131,19 +138,20 @@ namespace stickman_
             this.power.BackColor = System.Drawing.Color.Transparent;
             this.power.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.power.ForeColor = System.Drawing.Color.DarkRed;
-            this.power.Location = new System.Drawing.Point(41, 283);
+            this.power.Location = new System.Drawing.Point(18, 277);
+            this.power.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.power.Name = "power";
-            this.power.Size = new System.Drawing.Size(61, 17);
+            this.power.Size = new System.Drawing.Size(49, 13);
             this.power.TabIndex = 7;
             this.power.Text = "power: ";
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(982, 453);
+            this.ClientSize = new System.Drawing.Size(984, 461);
             this.Controls.Add(this.power);
             this.Controls.Add(this.angle);
             this.Controls.Add(this.game_over);
@@ -153,6 +161,7 @@ namespace stickman_
             this.Controls.Add(this.target);
             this.Controls.Add(this.stickman);
             this.DoubleBuffered = true;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1000, 500);
             this.MinimumSize = new System.Drawing.Size(1000, 500);
