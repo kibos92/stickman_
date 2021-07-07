@@ -29,6 +29,7 @@ namespace stickman_
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.stickman = new System.Windows.Forms.PictureBox();
             this.target = new System.Windows.Forms.PictureBox();
@@ -38,6 +39,7 @@ namespace stickman_
             this.game_over = new System.Windows.Forms.Label();
             this.angle = new System.Windows.Forms.Label();
             this.power = new System.Windows.Forms.Label();
+            this.clock = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.stickman)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.target)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrow)).BeginInit();
@@ -48,19 +50,20 @@ namespace stickman_
             this.stickman.BackColor = System.Drawing.Color.Transparent;
             this.stickman.Image = ((System.Drawing.Image)(resources.GetObject("stickman.Image")));
             this.stickman.Location = new System.Drawing.Point(21, 327);
-            this.stickman.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.stickman.Margin = new System.Windows.Forms.Padding(2);
             this.stickman.Name = "stickman";
             this.stickman.Size = new System.Drawing.Size(100, 100);
             this.stickman.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.stickman.TabIndex = 0;
             this.stickman.TabStop = false;
+            this.stickman.Click += new System.EventHandler(this.stickman_Click);
             // 
             // target
             // 
             this.target.BackColor = System.Drawing.Color.Transparent;
             this.target.Image = ((System.Drawing.Image)(resources.GetObject("target.Image")));
             this.target.Location = new System.Drawing.Point(857, 352);
-            this.target.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.target.Margin = new System.Windows.Forms.Padding(2);
             this.target.Name = "target";
             this.target.Size = new System.Drawing.Size(75, 75);
             this.target.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -99,9 +102,9 @@ namespace stickman_
             this.arrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.arrow.Image = ((System.Drawing.Image)(resources.GetObject("arrow.Image")));
             this.arrow.Location = new System.Drawing.Point(125, 327);
-            this.arrow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.arrow.Margin = new System.Windows.Forms.Padding(2);
             this.arrow.Name = "arrow";
-            this.arrow.Size = new System.Drawing.Size(75, 75);
+            this.arrow.Size = new System.Drawing.Size(85, 35);
             this.arrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.arrow.TabIndex = 4;
             this.arrow.TabStop = false;
@@ -145,6 +148,10 @@ namespace stickman_
             this.power.TabIndex = 7;
             this.power.Text = "power: ";
             // 
+            // clock
+            // 
+            this.clock.Tick += new System.EventHandler(this.clock_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -161,7 +168,7 @@ namespace stickman_
             this.Controls.Add(this.target);
             this.Controls.Add(this.stickman);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(1000, 500);
             this.MinimumSize = new System.Drawing.Size(1000, 500);
@@ -185,6 +192,7 @@ namespace stickman_
         private System.Windows.Forms.Label game_over;
         private System.Windows.Forms.Label angle;
         private System.Windows.Forms.Label power;
+        private System.Windows.Forms.Timer clock;
     }
 }
 
