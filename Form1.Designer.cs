@@ -107,9 +107,9 @@ namespace stickman_
             this.game_over.ForeColor = System.Drawing.Color.Red;
             this.game_over.Location = new System.Drawing.Point(400, 200);
             this.game_over.Name = "game_over";
-            this.game_over.Size = new System.Drawing.Size(200, 39);
+            this.game_over.Size = new System.Drawing.Size(210, 39);
             this.game_over.TabIndex = 5;
-            this.game_over.Text = "Game Over";
+            this.game_over.Text = "Game Over ";
             // 
             // Form1
             // 
