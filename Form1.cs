@@ -23,19 +23,19 @@ namespace stickman_
         private int time = 1;
         private int score_value = 0;
         private int life_value = 3;
+        private double speed = 1.4;
+        private double angleValue = 45;
+        private double gravity = 0.05;
         public void Projectile()
         {
-        double speed = 1.4;
-        double angle = 45;
-        double gravity = 0.05;
 
         double[] position = { arrow.Location.X, arrow.Location.Y };
 
-        double xvelocity = speed * Math.Cos((angle *Math.PI)/180);
-        double yvelocity = speed * Math.Sin((angle * Math.PI) / 180);
+        double xvelocity = speed * Math.Cos((angleValue *Math.PI)/180);
+        double yvelocity = speed * Math.Sin((angleValue * Math.PI) / 180);
 
-        double x = position[0] + xvelocity * time * Math.Cos((angle * Math.PI) / 180);
-        double y = position[1] - (yvelocity * time * Math.Sin((angle * Math.PI) / 180) - 0.5 * gravity * Math.Pow(time, 2));
+        double x = position[0] + xvelocity * time * Math.Cos((angleValue * Math.PI) / 180);
+        double y = position[1] - (yvelocity * time * Math.Sin((angleValue * Math.PI) / 180) - 0.5 * gravity * Math.Pow(time, 2));
 
         arrow.Location= new Point(Convert.ToInt32(x),Convert.ToInt32(y));
 
@@ -94,6 +94,30 @@ namespace stickman_
                 {
                     game_over.Visible = true;
                 }
+            }
+        }
+
+        private void Handling(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Up)
+            {
+                angleValue += 5;
+                angle.Text = "angle: " + angleValue.ToString();
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                angleValue -= 5;
+                angle.Text = "angle: " + angleValue.ToString();
+            }
+            if (e.KeyCode == Keys.Right)
+            {
+                speed += 0.1;
+                angle.Text = "power: " + speed.ToString();
+            }
+            if (e.KeyCode == Keys.Left)
+            {
+                speed -= 0.1;
+                angle.Text = "power: " + speed.ToString();
             }
         }
 

@@ -58,7 +58,7 @@ namespace stickman_
             this.stickman.BackColor = System.Drawing.Color.Transparent;
             this.stickman.Image = ((System.Drawing.Image)(resources.GetObject("stickman.Image")));
             this.stickman.Location = new System.Drawing.Point(21, 316);
-            this.stickman.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.stickman.Margin = new System.Windows.Forms.Padding(2);
             this.stickman.Name = "stickman";
             this.stickman.Size = new System.Drawing.Size(100, 100);
             this.stickman.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -70,8 +70,8 @@ namespace stickman_
             // 
             this.target.BackColor = System.Drawing.Color.Transparent;
             this.target.Image = ((System.Drawing.Image)(resources.GetObject("target.Image")));
-            this.target.Location = new System.Drawing.Point(866, 341);
-            this.target.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.target.Location = new System.Drawing.Point(836, 366);
+            this.target.Margin = new System.Windows.Forms.Padding(2);
             this.target.Name = "target";
             this.target.Size = new System.Drawing.Size(75, 75);
             this.target.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -110,7 +110,7 @@ namespace stickman_
             this.arrow.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.arrow.Image = ((System.Drawing.Image)(resources.GetObject("arrow.Image")));
             this.arrow.Location = new System.Drawing.Point(125, 316);
-            this.arrow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.arrow.Margin = new System.Windows.Forms.Padding(2);
             this.arrow.Name = "arrow";
             this.arrow.Size = new System.Drawing.Size(85, 19);
             this.arrow.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -139,9 +139,9 @@ namespace stickman_
             this.angle.Location = new System.Drawing.Point(18, 288);
             this.angle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.angle.Name = "angle";
-            this.angle.Size = new System.Drawing.Size(46, 13);
+            this.angle.Size = new System.Drawing.Size(60, 13);
             this.angle.TabIndex = 6;
-            this.angle.Text = "angle: ";
+            this.angle.Text = "angle: 45";
             // 
             // power
             // 
@@ -152,9 +152,9 @@ namespace stickman_
             this.power.Location = new System.Drawing.Point(18, 265);
             this.power.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.power.Name = "power";
-            this.power.Size = new System.Drawing.Size(49, 13);
+            this.power.Size = new System.Drawing.Size(67, 13);
             this.power.TabIndex = 7;
-            this.power.Text = "power: ";
+            this.power.Text = "power: 1.4";
             // 
             // clock
             // 
@@ -218,7 +218,7 @@ namespace stickman_
             this.Controls.Add(this.target);
             this.Controls.Add(this.stickman);
             this.DoubleBuffered = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(999, 499);
             this.MinimumSize = new System.Drawing.Size(999, 499);
