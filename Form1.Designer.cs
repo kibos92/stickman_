@@ -146,7 +146,7 @@ namespace stickman_
             // clock
             // 
             this.clock.Enabled = true;
-            this.clock.Interval = 1;
+            this.clock.Interval = 25;
             this.clock.Tick += new System.EventHandler(this.clock_Tick);
             // 
             // Form1

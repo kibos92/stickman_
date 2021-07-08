@@ -17,12 +17,14 @@ namespace stickman_
         {
             InitializeComponent();
             clock.Enabled = false;
+            arrow.Visible = false;
+            game_over.Visible = false;
         }
         private int time = 1;
         private void Projectile()
         {
-        int speed = 1;
-        int angle = 60;
+        double speed = 2;
+        double angle = 45;
         double gravity = 0.05;
 
         double[] position = { arrow.Location.X, arrow.Location.Y };
@@ -47,6 +49,7 @@ namespace stickman_
         private void stickman_Click(object sender, EventArgs e)
         {
             clock.Enabled = true;
+            arrow.Visible = true;
         }
     }
 }
