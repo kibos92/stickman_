@@ -25,7 +25,7 @@ namespace stickman_
         private int life_value = 3;
         private void Projectile()
         {
-        double speed = 1.5;
+        double speed = 1.7;
         double angle = 45;
         double gravity = 0.05;
 
@@ -42,38 +42,48 @@ namespace stickman_
         time++;
         }
 
-        private void GameOver()
+        private void Scoring()
         {
-            if (arrow.Bounds.IntersectsWith(left_wall.Bounds))
+            if (arrow.Bounds.IntersectsWith(target.Bounds))
             {
-                clock.Enabled = false;
-                game_over.Visible = true;
                 arrow.Visible = false;
+                score_value++;
             }
-            if (arrow.Bounds.IntersectsWith(right_wall.Bounds))
+            else if (arrow.Bounds.IntersectsWith(left_wall.Bounds))
             {
-                clock.Enabled = false;
-                game_over.Visible = true;
                 arrow.Visible = false;
+                life_value--;
             }
-            if (arrow.Bounds.IntersectsWith(up_wall.Bounds))
+            else if (arrow.Bounds.IntersectsWith(right_wall.Bounds))
             {
-                clock.Enabled = false;
-                game_over.Visible = true;
                 arrow.Visible = false;
+                life_value--;
             }
-            if (arrow.Bounds.IntersectsWith(down_wall.Bounds))
+            else if (arrow.Bounds.IntersectsWith(up_wall.Bounds))
             {
-                clock.Enabled = false;
-                game_over.Visible = true;
                 arrow.Visible = false;
+                life_value--;
+            }
+            else if (arrow.Bounds.IntersectsWith(down_wall.Bounds))
+            {
+                arrow.Visible = false;
+                life_value--;
             }
         }
 
+        private void GameOver()
+        {
+            if (life_value == 0)
+            {
+                clock.Enabled = false;
+                game_over.Visible = true;
+            }
+        }
 
         private void clock_Tick(object sender, EventArgs e)
         {
             Projectile();
+            Scoring();
             GameOver();
         }
 
