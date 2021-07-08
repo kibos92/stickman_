@@ -107,6 +107,8 @@ namespace stickman_
         {
             clock.Enabled = true;
             arrow.Visible = true;
+            arrow.Location = new Point (125, 316);
+            time = 1;
         }
 
         private void Form1_Load(object sender, EventArgs e)

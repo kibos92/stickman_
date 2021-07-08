@@ -247,11 +247,11 @@ namespace stickman_
         private System.Windows.Forms.Label game_over;
         private System.Windows.Forms.Label angle;
         private System.Windows.Forms.Label power;
-        private System.Windows.Forms.Timer clock;
         private System.Windows.Forms.PictureBox left_wall;
         private System.Windows.Forms.PictureBox down_wall;
         private System.Windows.Forms.PictureBox right_wall;
         private System.Windows.Forms.PictureBox up_wall;
+        public System.Windows.Forms.Timer clock;
     }
 }
 
