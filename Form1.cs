@@ -112,12 +112,12 @@ namespace stickman_
             if (e.KeyCode == Keys.Right)
             {
                 speed += 0.1;
-                angle.Text = "power: " + speed.ToString();
+                power.Text = "power: " + speed.ToString();
             }
             if (e.KeyCode == Keys.Left)
             {
                 speed -= 0.1;
-                angle.Text = "power: " + speed.ToString();
+                power.Text = "power: " + speed.ToString();
             }
         }
 

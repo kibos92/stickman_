@@ -225,6 +225,7 @@ namespace stickman_
             this.Name = "Form1";
             this.Text = "Stickman with Bow";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Handling);
             ((System.ComponentModel.ISupportInitialize)(this.stickman)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.target)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.arrow)).EndInit();
