@@ -21,9 +21,11 @@ namespace stickman_
             game_over.Visible = false;
         }
         private int time = 1;
+        private int score_value = 0;
+        private int life_value = 3;
         private void Projectile()
         {
-        double speed = 2;
+        double speed = 1.5;
         double angle = 45;
         double gravity = 0.05;
 
@@ -40,16 +42,50 @@ namespace stickman_
         time++;
         }
 
+        private void GameOver()
+        {
+            if (arrow.Bounds.IntersectsWith(left_wall.Bounds))
+            {
+                clock.Enabled = false;
+                game_over.Visible = true;
+                arrow.Visible = false;
+            }
+            if (arrow.Bounds.IntersectsWith(right_wall.Bounds))
+            {
+                clock.Enabled = false;
+                game_over.Visible = true;
+                arrow.Visible = false;
+            }
+            if (arrow.Bounds.IntersectsWith(up_wall.Bounds))
+            {
+                clock.Enabled = false;
+                game_over.Visible = true;
+                arrow.Visible = false;
+            }
+            if (arrow.Bounds.IntersectsWith(down_wall.Bounds))
+            {
+                clock.Enabled = false;
+                game_over.Visible = true;
+                arrow.Visible = false;
+            }
+        }
+
 
         private void clock_Tick(object sender, EventArgs e)
         {
             Projectile();
+            GameOver();
         }
 
         private void stickman_Click(object sender, EventArgs e)
         {
             clock.Enabled = true;
             arrow.Visible = true;
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
