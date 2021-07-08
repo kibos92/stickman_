@@ -21,21 +21,21 @@ namespace stickman_
         private int time = 1;
         private void Projectile()
         {
-                int speed = 1;
-                int angle = 30;
+        int speed = 1;
+        int angle = 60;
+        double gravity = 0.05;
 
-                double[] position = { arrow.Location.X, arrow.Location.Y };
+        double[] position = { arrow.Location.X, arrow.Location.Y };
 
-                Console.WriteLine(arrow.Location);
-                double xvelocity = speed * Math.Cos((angle *Math.PI)/180);
-                double yvelocity = speed * Math.Sin((angle * Math.PI) / 180);
+        double xvelocity = speed * Math.Cos((angle *Math.PI)/180);
+        double yvelocity = speed * Math.Sin((angle * Math.PI) / 180);
 
-                position[0] += (xvelocity * time);
-                position[1] += (yvelocity * time);
+        double x = position[0] + xvelocity * time * Math.Cos((angle * Math.PI) / 180);
+        double y = position[1] - (yvelocity * time * Math.Sin((angle * Math.PI) / 180) - 0.5 * gravity * Math.Pow(time, 2));
 
-                arrow.Location= new Point(Convert.ToInt32(position[0]),Convert.ToInt32(position[1]));
+        arrow.Location= new Point(Convert.ToInt32(x),Convert.ToInt32(y));
 
-                time++;
+        time++;
         }
 
 
