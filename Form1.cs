@@ -23,7 +23,7 @@ namespace stickman_
         private int time = 1;
         private int score_value = 0;
         private int life_value = 3;
-        private void Projectile()
+        public void Projectile()
         {
         double speed = 1.4;
         double angle = 45;
@@ -56,41 +56,44 @@ namespace stickman_
                 arrow.Visible = false;
                 life_value--;
                 life.Text = "Life: " + life_value.ToString();
-                clock.Stop();
-                clock.Start();
+                clock.Enabled = false;
+                if (life_value <= 0)
+                {
+                    game_over.Visible = true;
+                }
             }
             else if (arrow.Bounds.IntersectsWith(right_wall.Bounds))
             {
                 arrow.Visible = false;
                 life_value--;
                 life.Text = "Life: " + life_value.ToString();
-                clock.Stop();
-                clock.Start();
+                clock.Enabled = false;
+                if (life_value <= 0)
+                {
+                    game_over.Visible = true;
+                }
             }
             else if (arrow.Bounds.IntersectsWith(up_wall.Bounds))
             {
                 arrow.Visible = false;
                 life_value--;
                 life.Text = "Life: " + life_value.ToString();
-                clock.Stop();
-                clock.Start();
+                clock.Enabled = false;
+                if (life_value <= 0)
+                {
+                    game_over.Visible = true;
+                }
             }
             else if (arrow.Bounds.IntersectsWith(down_wall.Bounds))
             {
                 arrow.Visible = false;
                 life_value--;
                 life.Text = "Life: " + life_value.ToString();
-                clock.Stop();
-                clock.Start();
-            }
-        }
-
-        private void GameOver()
-        {
-            if (life_value == 0)
-            {
                 clock.Enabled = false;
-                game_over.Visible = true;
+                if (life_value <= 0)
+                {
+                    game_over.Visible = true;
+                }
             }
         }
 
