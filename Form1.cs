@@ -25,7 +25,7 @@ namespace stickman_
         private int life_value = 3;
         private void Projectile()
         {
-        double speed = 1.7;
+        double speed = 1.4;
         double angle = 45;
         double gravity = 0.05;
 
@@ -42,32 +42,46 @@ namespace stickman_
         time++;
         }
 
-        private void Scoring()
+        private void Collisions()
         {
             if (arrow.Bounds.IntersectsWith(target.Bounds))
             {
                 arrow.Visible = false;
                 score_value++;
+                score.Text = "Score: " + score_value.ToString();
+                clock.Enabled = false;
             }
             else if (arrow.Bounds.IntersectsWith(left_wall.Bounds))
             {
                 arrow.Visible = false;
                 life_value--;
+                life.Text = "Life: " + life_value.ToString();
+                clock.Stop();
+                clock.Start();
             }
             else if (arrow.Bounds.IntersectsWith(right_wall.Bounds))
             {
                 arrow.Visible = false;
                 life_value--;
+                life.Text = "Life: " + life_value.ToString();
+                clock.Stop();
+                clock.Start();
             }
             else if (arrow.Bounds.IntersectsWith(up_wall.Bounds))
             {
                 arrow.Visible = false;
                 life_value--;
+                life.Text = "Life: " + life_value.ToString();
+                clock.Stop();
+                clock.Start();
             }
             else if (arrow.Bounds.IntersectsWith(down_wall.Bounds))
             {
                 arrow.Visible = false;
                 life_value--;
+                life.Text = "Life: " + life_value.ToString();
+                clock.Stop();
+                clock.Start();
             }
         }
 
@@ -83,8 +97,7 @@ namespace stickman_
         private void clock_Tick(object sender, EventArgs e)
         {
             Projectile();
-            Scoring();
-            GameOver();
+            Collisions();
         }
 
         private void stickman_Click(object sender, EventArgs e)

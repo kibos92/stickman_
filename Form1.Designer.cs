@@ -70,7 +70,7 @@ namespace stickman_
             // 
             this.target.BackColor = System.Drawing.Color.Transparent;
             this.target.Image = ((System.Drawing.Image)(resources.GetObject("target.Image")));
-            this.target.Location = new System.Drawing.Point(878, 341);
+            this.target.Location = new System.Drawing.Point(866, 341);
             this.target.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.target.Name = "target";
             this.target.Size = new System.Drawing.Size(75, 75);
@@ -87,9 +87,9 @@ namespace stickman_
             this.score.Location = new System.Drawing.Point(10, 11);
             this.score.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.score.Name = "score";
-            this.score.Size = new System.Drawing.Size(107, 31);
+            this.score.Size = new System.Drawing.Size(123, 31);
             this.score.TabIndex = 2;
-            this.score.Text = "Score: ";
+            this.score.Text = "Score: 0";
             // 
             // life
             // 
@@ -100,9 +100,9 @@ namespace stickman_
             this.life.Location = new System.Drawing.Point(15, 46);
             this.life.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.life.Name = "life";
-            this.life.Size = new System.Drawing.Size(79, 31);
+            this.life.Size = new System.Drawing.Size(95, 31);
             this.life.TabIndex = 3;
-            this.life.Text = "Life: ";
+            this.life.Text = "Life: 3";
             // 
             // arrow
             // 
