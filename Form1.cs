@@ -19,6 +19,7 @@ namespace stickman_
             clock.Enabled = false;
             arrow.Visible = false;
             game_over.Visible = false;
+            pictureBox1.Hide();
         }
         private int time = 1;
         private int score_value = 0;
@@ -50,6 +51,7 @@ namespace stickman_
                 score_value++;
                 score.Text = "Score: " + score_value.ToString();
                 clock.Enabled = false;
+                pictureBox1.Show();
             }
             else if (arrow.Bounds.IntersectsWith(left_wall.Bounds))
             {
@@ -136,6 +138,26 @@ namespace stickman_
         }
 
         private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void target_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_2(object sender, EventArgs e)
         {
 
         }
