@@ -16,26 +16,26 @@ namespace stickman_
         public Form1()
         {
             InitializeComponent();
+            clock.Enabled = false;
         }
-        private int time = 0;
+        private int time = 1;
         private void Projectile()
         {
-            while (time <= 10)
-            { 
                 int speed = 1;
                 int angle = 30;
 
                 double[] position = { arrow.Location.X, arrow.Location.Y };
-                double xvelocity = speed * Math.Cos(angle);
-                double yvelocity = speed * Math.Sin(angle);
 
-                position[0] *= (xvelocity * time);
-                position[1] *= (yvelocity * time);
+                Console.WriteLine(arrow.Location);
+                double xvelocity = speed * Math.Cos((angle *Math.PI)/180);
+                double yvelocity = speed * Math.Sin((angle * Math.PI) / 180);
+
+                position[0] += (xvelocity * time);
+                position[1] += (yvelocity * time);
 
                 arrow.Location= new Point(Convert.ToInt32(position[0]),Convert.ToInt32(position[1]));
 
                 time++;
-            }
         }
 
 
@@ -46,7 +46,7 @@ namespace stickman_
 
         private void stickman_Click(object sender, EventArgs e)
         {
-            
+            clock.Enabled = true;
         }
     }
 }
