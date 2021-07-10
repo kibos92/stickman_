@@ -60,6 +60,7 @@ namespace stickman_
                 if (life_value <= 0)
                 {
                     game_over.Visible = true;
+                    stickman.Enabled = false;
                 }
             }
             else if (arrow.Bounds.IntersectsWith(right_wall.Bounds))
@@ -71,6 +72,7 @@ namespace stickman_
                 if (life_value <= 0)
                 {
                     game_over.Visible = true;
+                    stickman.Enabled = false;
                 }
             }
             else if (arrow.Bounds.IntersectsWith(up_wall.Bounds))
@@ -82,6 +84,7 @@ namespace stickman_
                 if (life_value <= 0)
                 {
                     game_over.Visible = true;
+                    stickman.Enabled = false;
                 }
             }
             else if (arrow.Bounds.IntersectsWith(down_wall.Bounds))
@@ -93,6 +96,7 @@ namespace stickman_
                 if (life_value <= 0)
                 {
                     game_over.Visible = true;
+                    stickman.Enabled = false;
                 }
             }
         }
