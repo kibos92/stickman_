@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31321.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stickman_", "stickman_.csproj", "{3B7B57AA-A15B-4F4A-A521-C6B495C5B34D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "stickman", "stickman.csproj", "{3B7B57AA-A15B-4F4A-A521-C6B495C5B34D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
